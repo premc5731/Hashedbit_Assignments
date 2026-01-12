@@ -1,0 +1,51 @@
+// Div Creation
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Div Task</title>
+
+    <style>
+        #container {
+            padding: 20px;
+            border: 2px dashed gray;
+            min-height: 200px;
+        }
+
+        #container div {
+            border: 1px solid black;
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Do not modify this HTML -->
+    <div id="container"></div>
+
+    <script>
+        // Write your code here
+        function createDiv(width, height, text) {
+            const newDiv = document.createElement("div");
+
+            newDiv.style.width = width + "px";
+            newDiv.style.height = height + "px";
+            newDiv.textContent = text;
+
+            const container = document.getElementById("container");
+            container.appendChild(newDiv);
+        }
+
+        // Do not change this code
+        Window.createDiv = createDiv;
+
+        // Example call (for demo)
+        //createDiv(200, 100, "Hello World");
+        createDiv(300, 150, "HashedBit Student");
+    </script>
+
+</body>
+</html>

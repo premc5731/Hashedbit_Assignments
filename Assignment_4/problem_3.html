@@ -1,0 +1,39 @@
+//Hide Show Para
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Toggle Paragraph Visibility</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>I am a headline made with HTML</h1>
+    <br />
+
+    <p id="para">Hashedbit Innovations.</p>
+    <br />
+
+    <button onclick="toggleVisibility()">Toggle Button</button>
+
+    <script>
+        function toggleVisibility() {
+            const paragraph = document.getElementById("para");
+
+            if (paragraph.style.display === "none") {
+                paragraph.style.display = "block";
+            } else {
+                paragraph.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+</html>
