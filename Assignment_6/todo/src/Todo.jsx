@@ -5,15 +5,14 @@ export default function TodoApp() {
   const [todos, setTodos] = useState([]);
 
   const addTask = () => {
-    if (task.trim() === "") return; // prevent empty tasks
+    if (task.trim() === "") return; 
 
     const updatedTodos = [...todos, task.trim()].sort((a, b) =>
       a.localeCompare(b)
     );
 
     setTodos(updatedTodos);
-    setTask(""); // clear input after adding
-  };
+    setTask(""); 
 
   const deleteTask = (index) => {
     const updatedTodos = todos.filter((_, i) => i !== index);
@@ -61,4 +60,5 @@ export default function TodoApp() {
       </div>
     </div>
   );
+}
 }
